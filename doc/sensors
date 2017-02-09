@@ -1,0 +1,14 @@
+Sensors
+=======
+
+Sensors listen for events happening that DD may be interested in. When they
+detect an event of interest, they raise an event and publish it into the Nexus
+sensor stream. Zero or more executors may decide to execute a flow based on the
+information received in the sensor.
+
+While being completely decoupled in the codebase, sensors must share a common
+schema with the executors that consume their messages. This allows executors
+to validate the structure of the message they have received. Additionally, it
+allows the Nexus UI to dynamically construct UI input/output components between
+sensors and executors.
+
