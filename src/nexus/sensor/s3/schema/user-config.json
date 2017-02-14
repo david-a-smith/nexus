@@ -1,0 +1,50 @@
+{
+  "title": "All possible configuration options that can be provided when starting the sensor",
+  "type": "object",
+  "properties": {
+    "bucket": {
+      "$ref": "common/s3-bucket.json"
+    },
+    "standard": {
+      "$ref": "common/sensor-config.json"
+    },
+    "key_matcher": {
+      "type": "object",
+      "title": "The sensor is triggered when an object key matches the regex from this config option",
+      "properties": {
+        "pattern": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["regex", "partial", "exact"]
+        }
+      }
+    },
+    "op_matcher": {
+      "type": "object",
+      "properties": {
+        "pattern": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["regex", "partial", "exact"]
+        }
+      }
+    },
+    "trigger_on_existing_file": {
+      "type": "boolean",
+      "title": "When enabled, the sensor will check for the existence of a file before listening for updates to the bucket. Only works when key_matcher.type = exact"
+    },
+    "existing_file_max_age_minutes": {
+      "type": "integer",
+      "title": "If trigger_on_existing_file is set, the existing file must have been created on or after the current time minus the max_age period which is specified in minutes"
+    },
+    "notification_transport": {
+      "type": "string",
+      "enum": ["sqs", "sns"]
+    }
+  },
+  "required": ["bucket", "key_matcher", "notification_transport"]
+}

@@ -1,0 +1,13 @@
+{
+  "title": "AWS S3 bucket",
+  "type": "object",
+  "properties": {
+    "aws_account": {
+      "$ref": "common/aws-account.json"
+    },
+    "name": {
+      "type": "string"
+    }
+  },
+  "required": ["aws_account", "name"]
+}

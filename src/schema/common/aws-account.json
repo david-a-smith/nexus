@@ -1,4 +1,4 @@
 {
-  "title": "AWS Account",
+  "title": "The text alias for the AWS that is used to retrieve the AWS account credentials.",
   "type": "string"
 }

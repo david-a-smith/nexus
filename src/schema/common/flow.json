@@ -1,0 +1,10 @@
+{
+  "title": "Schema for a Nexus flow",
+  "type": "object",
+  "properties": {
+    "flow_instance": {
+      "type": "string"
+    },
+    ""
+  }
+}

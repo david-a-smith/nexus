@@ -1,0 +1,10 @@
+{
+  "title": "Generic sensor config options",
+  "type": "object",
+  "properties": {
+    "end_on_trigger": {
+      "title": "Quit the sensor process when it triggers. Suitable for transient sensors",
+      "type": "boolean"
+    }
+  }
+}

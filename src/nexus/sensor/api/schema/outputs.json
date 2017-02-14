@@ -1,0 +1,16 @@
+{
+  "title": "API sensor outputs",
+  "properties": {
+    "type": "object",
+    "properties": {
+      "flow": {
+        "$ref": "common/flow.json"
+      },
+      "api_payload": {
+        "title": "The payload that was submitted by the request",
+        "type": "object"
+      }
+    }
+  },
+  "required": ["flow", "payload"]
+}

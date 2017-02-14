@@ -2,15 +2,13 @@
   "title": "AWS S3 Object",
   "type": "object",
   "properties": {
-    "aws_account": {
-      "$ref": "common/aws-account.json"
-    },
     "bucket": {
-      "type": "string"
+      "$ref": "common/s3-bucket.json"
     },
     "object_key": {
-      "type": "string"
+      "type": "string",
+      "title": "The key of the object in S3. Combine this with the bucket to access the object."
     }
   },
-  "required": ["aws_account", "bucket", "object_key"]
+  "required": ["bucket", "object_key"]
 }

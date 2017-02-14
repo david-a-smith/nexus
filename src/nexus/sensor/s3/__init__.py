@@ -14,6 +14,9 @@ class S3MetaData(SensorMetaData):
         """
         SensorMetaData.__init__(self)
 
-    def read_schema(self):
-        return self.schema_from_file('s3.json')
+    def user_config(self):
+        return self.schema_from_file('s3/schema/user-config.json')
+
+    def outputs(self):
+        return self.schema_from_file('s3/schema/outputs.json')
 

@@ -1,0 +1,15 @@
+{
+  "title": "AWS S3 sensor outputs",
+  "properties": {
+    "type": "object",
+    "properties": {
+      "s3_object": {
+        "$ref": "common/s3-object.json"
+      },
+      "operation": {
+        "type": "string"
+      }
+    }
+  },
+  "required": ["s3_object", "operation"]
+}

@@ -1,0 +1,10 @@
+{
+  "title": "Configuration for the API sensor",
+  "type": "object",
+  "properties": {
+    "port": {
+      "title": "Port for the API server to listen on",
+      "type": "integer"
+    }
+  }
+}
