@@ -43,7 +43,7 @@
     },
     "notification_transport": {
       "type": "string",
-      "enum": ["sqs", "sns"]
+      "enum": ["sqs"]
     }
   },
   "required": ["bucket", "key_matcher", "notification_transport"]

@@ -1,0 +1,19 @@
+{
+  "title": "Listen for any additions to test prefix in the nexus test bucket",
+  "sensor_module": "nexus.sensor.s3",
+  "config": {
+    "bucket": {
+      "aws_account": "nexus",
+      "name": "nexus.test"
+    },
+    "key_matcher": {
+      "pattern": "^test.*",
+      "type": "regex"
+    },
+    "op_matcher": {
+      "pattern": "created",
+      "type": "exact"
+    },
+    "notification_transport": "sqs"
+  }
+}

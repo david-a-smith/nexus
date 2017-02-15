@@ -1,10 +1,10 @@
 {
-  "title": "API sensor outputs",
+  "title": "API sensor inputs",
   "properties": {
     "type": "object",
     "properties": {
       "payload": {
-        "title": "The payload that was submitted by the request to the API",
+        "title": "The payload that was submitted by the request",
         "type": "object"
       }
     }
